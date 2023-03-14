@@ -1,6 +1,6 @@
-# fly.toml file generated for solitary-water-1439 on 2023-03-13T10:26:47-04:00
+# fly.toml file generated for sparkling-smoke-6886 on 2023-03-14T14:12:06-04:00
 
-app = "solitary-water-1439"
+app = "sparkling-smoke-6886"
 kill_signal = "SIGINT"
 kill_timeout = 5
 primary_region = "ams"
