@@ -14,7 +14,7 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (query.includes("plus")) {
-    const answer = (parseInt(query.substring(8,10)) + parseInt(query.substring(16,18)))
+    const answer = (parseInt(query.substring(8,10)) + parseInt(query.substring(17,19)))
     return answer.toString();
   }
 
