@@ -19,7 +19,7 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (query.includes("multiplied")) {
-    const answer = (parseInt(query.substring(8,10)) * parseInt(query.substring(17,19)))
+    const answer = (parseInt(query.substring(8,10)) * parseInt(query.substring(25,27)))
     return answer.toString();
   }
 
