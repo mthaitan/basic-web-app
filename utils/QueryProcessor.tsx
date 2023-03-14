@@ -14,15 +14,19 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (query.includes("plus")) {
-    const answer = (parseInt(query.substring(8,10)) + parseInt(query.substring(17,19)))
+    const answer = (parseInt(query.substring(8,10)) + parseInt(query.substring(16,query.length-1)))
+    return answer.toString();
+  }
+
+  if (query.includes("minus")) {
+    const answer = (parseInt(query.substring(8,10)) - parseInt(query.substring(16,query.length-1)))
     return answer.toString();
   }
 
   if (query.includes("multiplied")) {
-    const answer = (parseInt(query.substring(8,10)) * parseInt(query.substring(25,27)))
+    const answer = (parseInt(query.substring(8,10)) * parseInt(query.substring(24,query.length-1)))
     return answer.toString();
   }
-
 
   return "";
 }
