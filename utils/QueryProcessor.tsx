@@ -18,6 +18,11 @@ export default function QueryProcessor(query: string): string {
     return answer.toString();
   }
 
+  if (query.includes("multiplied")) {
+    const answer = (parseInt(query.substring(8,10)) * parseInt(query.substring(17,19)))
+    return answer.toString();
+  }
+
 
   return "";
 }
