@@ -19,8 +19,19 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (query.includes("minus")) {
-    const answer = (parseInt(query.substring(8,10)) - parseInt(query.substring(16,query.length-1)))
-    return answer.toString();
+    if (query.length === 20) {
+      const num1 = parseInt(query.substring(8,10))
+      const num2 = parseInt(query.substring(18,query.length-1))
+      const answer = num1 - num2
+      return answer.toString();
+    }
+    else {
+      const num1 = parseInt(query.substring(8,9))
+      const num2 = parseInt(query.substring(17,query.length-1))
+      const answer = num1 - num2
+      return answer.toString();
+    }
+    
   }
 
   if (query.includes("multiplied")) {
