@@ -13,11 +13,11 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
-  if (query.includes("What is 98 plus 35?")) {
-    return (
-      "133"
-    );
+  if (query.includes("plus")) {
+    const answer = (parseInt(query.substring(8,10)) + parseInt(query.substring(15,17)))
+    return answer.toString();
   }
+
 
   return "";
 }
